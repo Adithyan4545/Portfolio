@@ -9,10 +9,16 @@ import EducationSection from './components/EducationSection';
 import CertificationsSection from './components/CertificationsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import { WavyBackground } from './components/ui/wavy-background';
 
 export const App: React.FC = () => {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-200 overflow-x-hidden">
+    <WavyBackground
+      backgroundFill="#000000"
+      waveOpacity={0.45}
+      blur={10}
+      speed="fast"
+    >
       <Navbar />
       <main>
         <HeroSection />
@@ -25,8 +31,9 @@ export const App: React.FC = () => {
         <ContactSection />
       </main>
       <Footer />
-    </div>
+    </WavyBackground>
   );
 };
 
 export default App;
+

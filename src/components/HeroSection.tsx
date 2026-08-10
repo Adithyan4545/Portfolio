@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, FileText, ArrowRight, Mail, Code, Terminal, Sparkles } from 'lucide-react';
-import { AnimatedGradientBackground } from './ui/animated-gradient-background';
+import { WavyBackground } from './ui/wavy-background';
 
 export const HeroSection: React.FC = () => {
   const resumeUrl = import.meta.env.BASE_URL + 'official_resume.pdf';
   const profilePhotoUrl = import.meta.env.BASE_URL + 'profile.jpg';
 
   return (
-    <AnimatedGradientBackground className="min-h-screen pt-28 pb-16 flex items-center justify-center">
+    <section className="min-h-screen pt-28 pb-16 flex items-center justify-center relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
@@ -151,7 +151,7 @@ export const HeroSection: React.FC = () => {
 
         </div>
       </div>
-    </AnimatedGradientBackground>
+    </section>
   );
 };
 
